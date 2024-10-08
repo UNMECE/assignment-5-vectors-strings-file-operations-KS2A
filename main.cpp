@@ -96,6 +96,6 @@ int main(int argc, char* argv[]) {
 	
 		average_colors(pixel_list);
 		flip_vertically(pixel_list);
-
+	}
 	return 0;
 }
