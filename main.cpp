@@ -39,7 +39,7 @@ void flip_vertically(vector<Pixel>& pixel_list) {
 			swap(pixel_list[i].y, pixel_list[pixel_list.size() - 1 - i].y);
 		}
 		for (Pixel& p : pixel_list) {
-			out << p.x << "," << p.y << "," << p.r << "," << p.g << "," << p.b;
+			out << p.x << "," << p.y << "," << p.r << "," << p.g << "," << p.b << endl;
 		}
 		out.close();
 	}
@@ -91,11 +91,13 @@ int main(int argc, char* argv[]) {
 			}
 
 			in.close();
-		
-	}
-	
+
+		}
+
 		average_colors(pixel_list);
 		flip_vertically(pixel_list);
+
+		cout << "Check 'flipped.dat' in the project folder to see results" << endl;
 	}
 	return 0;
 }
